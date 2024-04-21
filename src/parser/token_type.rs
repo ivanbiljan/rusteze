@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub enum TokenType {
     Number(f64),
     PlusSign,
@@ -31,5 +32,6 @@ pub enum TokenType {
     EqualsEquals,
     StringLiteral(&'static str),
     Identifier,
-    EndOfFile
+    EndOfFile,
+    Illegal,
 }

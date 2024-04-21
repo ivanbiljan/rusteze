@@ -7,6 +7,13 @@ pub struct SyntaxToken {
 }
 
 impl SyntaxToken {
+    pub fn new(kind: TokenType, source_location: SourceLocation) -> Self {
+        SyntaxToken {
+            kind,
+            source_location
+        }
+    }
+
     pub fn is_unary_operator(&self) -> bool {
         match self.kind {
             TokenType::Bang => true,

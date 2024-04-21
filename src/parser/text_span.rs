@@ -1,13 +1,17 @@
 pub struct TextSpan {
-    start: u16,
-    length: u16
+    pub start: usize,
+    pub length: usize,
 }
 
 impl TextSpan {
-    pub fn from_bounds(start: u16, end: u16) -> TextSpan {
+    pub fn new(start: usize, length: usize) -> TextSpan {
+        TextSpan { start, length }
+    }
+
+    pub fn from_bounds(start: usize, end: usize) -> TextSpan {
         TextSpan {
             start,
-            length: end - start
+            length: end - start,
         }
     }
 }
