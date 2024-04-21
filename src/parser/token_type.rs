@@ -1,4 +1,4 @@
-enum Token {
+pub enum TokenType {
     Number(f64),
     PlusSign,
     MinusSign,
