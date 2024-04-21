@@ -30,5 +30,6 @@ pub enum TokenType {
     Equals,
     EqualsEquals,
     StringLiteral(&'static str),
-    Identifier
+    Identifier,
+    EndOfFile
 }
